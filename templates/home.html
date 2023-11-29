@@ -16,8 +16,14 @@
   <body>
     <div class="container">
     <h1 class="text-center mt-2 mb-4">Welcome to Flask Test Site</h1>
-    <p class="text-center">This is the home page</p>
+    <p class="text-center">This is the home page for {{company_name}}</p>
     <img class="img-fluid" id="banner" src="https://flask-test-site--surjit84singh.repl.co/static/banner.jpg" height="320">
+      <p> {% for job in jobs %}
+          {% include 'jobitem.html' %}      
+         {% endfor %}
+       </p>
+    
+  </body>
     <h2 class="text-center">About Flask test site</h2>
     <p class="text-center">This is a test site for flask</p>
       <div class="text-center">
